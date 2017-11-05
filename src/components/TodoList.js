@@ -15,12 +15,17 @@ export default class TodoList extends Component{
         let newTasks = this.state.tasks;
         newTasks.push(task);
         this.setState({tasks: newTasks});
-        console.log(this.state.tasks);
+    }
+
+    deleteTask(index){
+        let newTasks = this.state.tasks;
+        newTasks.splice(index, 1);
+        this.setState({tasks: newTasks});
     }
 
     render(){
         const tasks = this.state.tasks.map((elem, index) => {
-            return <Task task={elem} key={index} />;
+            return <Task deleteTask={this.deleteTask.bind(this)} task={elem} index={index} />;
         });
 
         return <div>

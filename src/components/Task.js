@@ -6,6 +6,6 @@ export default class Task extends Component{
 
 
     render(){
-        return <div>{this.props.task}</div>;
+        return <div onClick={this.props.deleteTask.bind(null, this.props.index)}>{this.props.task}</div>;
     }
 }
