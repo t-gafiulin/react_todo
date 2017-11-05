@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
+import './css/font-awesome.min.css'
 import Todo from './components/TodoList';
 
 class App extends Component {
