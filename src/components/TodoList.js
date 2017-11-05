@@ -25,7 +25,11 @@ export default class TodoList extends Component{
 
     render(){
         const tasks = this.state.tasks.map((elem, index) => {
-            return <Task deleteTask={this.deleteTask.bind(this)} task={elem} index={index} />;
+            return <Task 
+                deleteTask={this.deleteTask.bind(this)} 
+                task={elem} index={index} 
+                addClass={index % 2 == 1 ? 'odd' : 'even'}    
+            />;
         });
 
         return <div className='todo'>

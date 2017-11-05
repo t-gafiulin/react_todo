@@ -24,4 +24,10 @@ ul{
 .task{
   display: flex;
   justify-content: space-between;
+  padding: 10px;
+}
+
+.even{
+  background-color: black;
+  color: white;
 }
