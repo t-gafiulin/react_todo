@@ -28,7 +28,7 @@ export default class TodoList extends Component{
             return <Task deleteTask={this.deleteTask.bind(this)} task={elem} index={index} />;
         });
 
-        return <div>
+        return <div className='todo'>
             <AddTask addTask={this.addTask.bind(this)} />
             <ul>
                 {tasks}

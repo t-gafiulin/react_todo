@@ -1,28 +1,27 @@
-.App {
-  text-align: center;
+
+.todo{
+  margin: auto;
+  width: 250px;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+.add-task{
+  padding: 10px;
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+.add-task_input{
+  width: 90%;
 }
 
-.App-title {
-  font-size: 1.5em;
+.fa-plus{
+  padding-left: 5px;
+  padding-top: 5px;
 }
 
-.App-intro {
-  font-size: large;
+ul{
+  padding: 10px;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.task{
+  display: flex;
+  justify-content: space-between;
 }
