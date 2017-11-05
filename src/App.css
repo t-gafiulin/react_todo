@@ -28,6 +28,11 @@ ul{
 }
 
 .even{
-  background-color: black;
+  background-color: rgb(62, 160, 141);
   color: white;
+}
+
+.even:hover, 
+.odd:hover{
+  background-color: #DF4949;
 }
