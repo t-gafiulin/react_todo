@@ -16,9 +16,10 @@ export default class AddTask extends Component{
     }
 
     handleClick(){
-        //this.props.addTask.bind(null, this.state.value);
-        this.props.addTask(this.state.value);
-        this.setState({value: ''});
+        if(this.state.value != ''){
+            this.props.addTask(this.state.value);
+            this.setState({value: ''});
+        }
     }
 
     render(){
