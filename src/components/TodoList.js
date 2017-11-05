@@ -19,10 +19,15 @@ export default class TodoList extends Component{
     }
 
     render(){
+        const tasks = this.state.tasks.map((elem, index) => {
+            return <Task task={elem} key={index} />;
+        });
+
         return <div>
             <AddTask addTask={this.addTask.bind(this)} />
-            <Task />
-            <Task />
+            <ul>
+                {tasks}
+            </ul>
         </div>;
     }
 }

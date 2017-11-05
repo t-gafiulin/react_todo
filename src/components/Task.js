@@ -6,6 +6,6 @@ export default class Task extends Component{
 
 
     render(){
-        return <div>Task</div>;
+        return <div>{this.props.task}</div>;
     }
 }
