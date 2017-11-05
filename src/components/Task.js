@@ -6,7 +6,7 @@ export default class Task extends Component{
     render(){
         return <div>
             {this.props.task}
-            <button onClick={this.props.deleteTask.bind(null, this.props.index)}>Delete task</button>
+            <i class="fa fa-trash" aria-hidden="true" onClick={this.props.deleteTask.bind(null, this.props.index)}></i>
         </div>;
     }
 }

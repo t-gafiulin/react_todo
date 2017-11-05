@@ -23,7 +23,7 @@ export default class AddTask extends Component{
 
     render(){
         return <div>
-            <input value={this.state.value} onChange={this.handleChange.bind(this)} />
+            <input value={this.state.value} onChange={this.handleChange.bind(this)} />  
             <i className="fa fa-plus" aria-hidden="true" onClick={this.handleClick.bind(this)}></i>
         </div>;
     }
