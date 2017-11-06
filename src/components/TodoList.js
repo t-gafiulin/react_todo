@@ -28,7 +28,7 @@ export default class TodoList extends Component{
             return <Task 
                 deleteTask={this.deleteTask.bind(this)} 
                 task={elem} index={index} 
-                addClass={index % 2 == 1 ? 'odd' : 'even'}    
+                addClass={index % 2 === 1 ? 'odd' : 'even'}    
             />;
         });
 
