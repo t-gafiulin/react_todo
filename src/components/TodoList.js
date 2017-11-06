@@ -12,8 +12,12 @@ export default class TodoList extends Component{
     }
 
     addTask(task){
+        let newTask = {
+            id: this.state.tasks.length,
+            task: task
+        };
         let newTasks = this.state.tasks;
-        newTasks.push(task);
+        newTasks.push(newTask);
         this.setState({tasks: newTasks});
     }
 
@@ -27,8 +31,10 @@ export default class TodoList extends Component{
         const tasks = this.state.tasks.map((elem, index) => {
             return <Task 
                 deleteTask={this.deleteTask.bind(this)} 
-                task={elem} index={index} 
-                addClass={index % 2 == 1 ? 'odd' : 'even'}    
+                task={elem.task} 
+                index={elem.id}
+                key={index}
+                addClass={index % 2 === 1 ? 'odd' : 'even'}    
             />;
         });
 
