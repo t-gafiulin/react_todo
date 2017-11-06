@@ -13,26 +13,16 @@
 }
 
 .add-task__input{
-  width: 85%;
   border: none;
+  display: inline-block;
   border-bottom: 1px solid black;
   background: none;
-  font-size: 18px;
+  font-size: 22px;
   color: white;
 }
 
 .add-task__input:focus{
   outline: none;
-}
-
-.fa-plus{
-  padding: 10px;
-  border: 1px solid black;
-  float: right;
-}
-
-.fa-plus:hover{
-  background-color: rgb(55, 165, 143);
 }
 
 ul{

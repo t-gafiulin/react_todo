@@ -17,18 +17,20 @@ export default class AddTask extends Component{
                 this.props.addTask(this.state.value);
                 this.setState({value: ''});
             }
-        }else{
+        } else if(e.key === 'Backspace'){
+            this.setState({value: this.state.value.substring(0, this.state.value.length - 1)});
+        } else if((e.keyCode >= 48 && e.keyCode <= 90) || e.keyCode === 32){
             this.setState({value: this.state.value + e.key});
         }
     }
 
     render(){
         return <div className='add-task'>
-            I need to
+            <span>I need to </span> 
             <input 
                 className='add-task__input' 
                 value={this.state.value} 
-                onKeyPress={this.handleChange.bind(this)} 
+                onKeyDown={this.handleChange.bind(this)} 
             />  
         </div>;
     }
