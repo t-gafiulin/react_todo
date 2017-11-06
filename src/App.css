@@ -28,10 +28,12 @@ ul{
 .task-block{
   display: flex;
   justify-content: space-between;
+  overflow: hidden;
 }
 
 .task-block .fa-trash{
-  display: none;
+  /* display: none; */
+  width: 0;
 }
 
 .task-block__task{
@@ -39,18 +41,30 @@ ul{
 }
 
 .task-block:hover .fa-trash{
-  display: inline-block;
+  /* display: inline-block; */
+  width: 13.5px;
   background-color: #DF4949;
   padding: 10px;
+  color: white;
+  transition: display 0.2s ease;
+  -webkit-transition: all 0.2s ease;
+}
+
+.task-block:hover .fa-trash:hover{
+  background-color: #c0392b;
 }
 
 .even{
-  background-color: rgb(62, 160, 141);
-  color: white;
+  /* background-color: rgb(62, 160, 141); */
+  background-color: white;
+}
+
+.odd{
+  background-color: #f7f7f7;
 }
 
 .even:hover, 
 .odd:hover{
-  /* background-color: #DF4949; */
-  background-color: greenyellow;
+  background-color: #eee;
+  /* background-color: greenyellow; */
 }
