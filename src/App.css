@@ -5,7 +5,7 @@
 
 .todo{
   margin: auto;
-  width: 250px;
+  width: 400px;
 }
 
 .add-task{
@@ -41,12 +41,12 @@ ul{
 }
 
 .task-block:hover .fa-trash{
-  /* display: inline-block; */
-  width: 13.5px;
+  width: 50px;
   background-color: #DF4949;
-  padding: 10px;
+  text-align: center;
+  padding-top: 15px;
   color: white;
-  transition: display 0.2s ease;
+  transition: all 0.2s ease;
   -webkit-transition: all 0.2s ease;
 }
 
@@ -55,7 +55,6 @@ ul{
 }
 
 .even{
-  /* background-color: rgb(62, 160, 141); */
   background-color: white;
 }
 
@@ -66,5 +65,4 @@ ul{
 .even:hover, 
 .odd:hover{
   background-color: #eee;
-  /* background-color: greenyellow; */
 }
