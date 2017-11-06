@@ -7,13 +7,17 @@ import { Provider } from 'react-redux';
 
 
 function getTasks(state = [], action){
-    if (action.type === 'ADD_TASK'){
+    switch(action.type){
+    case 'ADD_TASK':
         return [
             ...state,
             action.payload
-        ]
+        ];
+    case 'DELETE_TASK':
+        return state.filter(el => el.id !== action.payload.id);
+    default:
+        return state;
     }
-    return state;
 }
 
 const store = createStore(getTasks);

@@ -15,9 +15,7 @@ export class TodoList extends Component{
     }
 
     deleteTask(index){
-        let newTasks = this.state.tasks;
-        newTasks.splice(index, 1);
-        this.setState({tasks: newTasks});
+        this.props.deleteTask(index);
     }
 
     render(){
@@ -47,6 +45,9 @@ export default connect (
     dispatch => ({
         addTask: (task) => {
             dispatch({type: 'ADD_TASK', payload: task})
+        },
+        deleteTask: (id) => {
+            dispatch({type: 'DELETE_TASK', payload: {id: id}})
         }
     })
 )(TodoList);
