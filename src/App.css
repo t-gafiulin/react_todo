@@ -1,6 +1,7 @@
 .App{
-  background-color: #45B29D;
+  background: #45B29D;
   height: 100vh;
+  overflow: hidden;
 }
 
 .todo{
