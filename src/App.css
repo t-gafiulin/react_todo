@@ -13,7 +13,7 @@
 }
 
 .add-task__input{
-  width: 90%;
+  width: 85%;
   border: none;
   border-bottom: 1px solid black;
   background: none;
@@ -26,8 +26,13 @@
 }
 
 .fa-plus{
-  padding-left: 5px;
-  padding-top: 5px;
+  padding: 10px;
+  border: 1px solid black;
+  float: right;
+}
+
+.fa-plus:hover{
+  background-color: rgb(55, 165, 143);
 }
 
 ul{
