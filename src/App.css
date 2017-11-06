@@ -1,3 +1,7 @@
+.App{
+  background-color: #45B29D;
+  height: 100vh;
+}
 
 .todo{
   margin: auto;
