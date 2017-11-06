@@ -1,24 +1,17 @@
 import React, { Component } from 'react';
 import AddTask from './AddTask';
 import Task from './Task';
+import { connect } from 'react-redux';
 
 
-export default class TodoList extends Component{
-    constructor(){
-        super();
-        this.state = {
-            tasks: []
-        }
-    }
+export class TodoList extends Component{
 
     addTask(task){
         let newTask = {
-            id: this.state.tasks.length,
+            id: this.props.tasks.length,
             task: task
         };
-        let newTasks = this.state.tasks;
-        newTasks.push(newTask);
-        this.setState({tasks: newTasks});
+        this.props.addTask(newTask);
     }
 
     deleteTask(index){
@@ -28,7 +21,7 @@ export default class TodoList extends Component{
     }
 
     render(){
-        const tasks = this.state.tasks.map((elem, index) => {
+        const tasks = this.props.tasks.map((elem, index) => {
             return <Task 
                 deleteTask={this.deleteTask.bind(this)} 
                 task={elem.task} 
@@ -46,3 +39,14 @@ export default class TodoList extends Component{
         </div>;
     }
 }
+
+export default connect (
+    state => ({
+        tasks: state
+    }),
+    dispatch => ({
+        addTask: (task) => {
+            dispatch({type: 'ADD_TASK', payload: task})
+        }
+    })
+)(TodoList);
