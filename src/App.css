@@ -27,13 +27,15 @@
 }
 
 ul{
-  padding: 10px;
+  padding: 0;
+  box-shadow: 10px 10px 0 rgba(0,0,0,.2);
 }
 
 .task-block{
   display: flex;
   justify-content: space-between;
   overflow: hidden;
+  
 }
 
 .task-block .fa-trash{
