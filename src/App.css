@@ -25,18 +25,23 @@ ul{
   padding: 10px;
 }
 
-.task{
+.task-block{
   display: flex;
   justify-content: space-between;
-  padding: 10px;
 }
 
-.task .fa-trash{
+.task-block .fa-trash{
   display: none;
 }
 
-.task:hover .fa-trash{
+.task-block__task{
+  padding: 10px;
+}
+
+.task-block:hover .fa-trash{
   display: inline-block;
+  background-color: #DF4949;
+  padding: 10px;
 }
 
 .even{
@@ -46,5 +51,6 @@ ul{
 
 .even:hover, 
 .odd:hover{
-  background-color: #DF4949;
+  /* background-color: #DF4949; */
+  background-color: greenyellow;
 }
