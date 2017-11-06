@@ -16,7 +16,7 @@ export default class AddTask extends Component{
     }
 
     handleClick(){
-        if(this.state.value !== ''){
+        if(this.state.value != ''){
             this.props.addTask(this.state.value);
             this.setState({value: ''});
         }
@@ -24,7 +24,6 @@ export default class AddTask extends Component{
 
     render(){
         return <div className='add-task'>
-            I need to 
             <input className='add-task_input' value={this.state.value} onChange={this.handleChange.bind(this)} />  
             <i className="fa fa-plus" aria-hidden="true" onClick={this.handleClick.bind(this)}></i>
         </div>;
